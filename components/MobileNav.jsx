@@ -33,7 +33,7 @@ export default function MobileNav (){
             <CiMenuFries className="text-[32px] text-accent "/>
         </SheetTrigger>
         <SheetContent className="flex flex-col">
-            <div className="text-center mt-32 mb-40">
+            <div className="text-center mt-20 mb-12">
                 <Link href="/" className="text-3xl font-semibold">
                     M.Alaa <span className="text-accent">.</span>
                 </Link>

@@ -22,7 +22,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
             {/*left side of the home page text area*/ }
-            <div className="text-center xl:text-left">
+            <div className="text-center xl:text-left order-2 xl:order-none">
               <span className="hover:text-accent">Electrical Engineer | Front-End Web Developer</span>
               <h1 className="h1 mb-6">Hello I'm <br /> <span className="text-accent">Muhammad Alaa</span> </h1>
               <p className="max-w-[500px] mb-9 text-white/80">A motivated person who is willing to go above and beyond on any project and to learn valuable skills on my own time.</p>
@@ -43,10 +43,8 @@ export default function Home() {
             </div>
 
             {/*right side of the home page the image area */}
-            <div>
-
+            <div className="order-1 xl:order-none mb-8 xl:mb-0">
               <Photo />
-              
               </div>
 
           </div>

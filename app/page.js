@@ -1,7 +1,21 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi";
 import Socials from "@/components/Socials";
+import Photo from "@/components/Photo";
 export default function Home() {
+    /*Downloading Resume by creating an anchor element then adding the href and the download attribute*/ 
+    const onButtonClick = () => {
+        const pdfUrl = "/Muhammad-Alaa-Resume.pdf";
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = "Muhammad-Alaa-Resume.pdf"; // specify the filename
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.open("/Muhammad-Alaa-Resume.pdf", "_blank");
+    };
   return (
     <main> 
       <section className="h-full">
@@ -14,7 +28,7 @@ export default function Home() {
               <p className="max-w-[500px] mb-9 text-white/80">A motivated person who is willing to go above and beyond on any project and to learn valuable skills on my own time.</p>
             {/* the download cv button */}
               <div className="flex flex-col xl:flex-row items-center gap-8">
-                  <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+                  <Button variant="outline" size="lg" className="uppercase flex items-center gap-2" onClick={ onButtonClick}>
                     <span>Download CV</span>
                     <FiDownload className="text-xl"/>
                   </Button>
@@ -31,7 +45,7 @@ export default function Home() {
             {/*right side of the home page the image area */}
             <div>
 
-              photo
+              <Photo />
               
               </div>
 
